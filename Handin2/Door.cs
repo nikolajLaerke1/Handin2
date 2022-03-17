@@ -17,17 +17,17 @@ public class Door : IDoor
 
     public void OnDoorOpen()
     {
-        OnDoor(new DoorEventArgs() {NewState = "open"});
+        OnDoorAction(new DoorEventArgs() {NewState = "open"});
     }
 
     public void OnDoorClose()
     {
-        OnDoor(new DoorEventArgs() {NewState = "closed"});
+        OnDoorAction(new DoorEventArgs() {NewState = "closed"});
     }
 
     public event EventHandler<DoorEventArgs> DoorEvent;
 
-    protected virtual void OnDoor(DoorEventArgs e)
+    protected virtual void OnDoorAction(DoorEventArgs e)
     {
         DoorEvent?.Invoke(this, e);
     }
