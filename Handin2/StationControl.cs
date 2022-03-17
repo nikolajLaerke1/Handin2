@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Handin2;
 using Ladeskab.Interfaces;
 
 namespace Ladeskab
