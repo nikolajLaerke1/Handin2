@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Handin2
 {
+    public class DoorOpenedEventArgs : EventArgs
+    {
+        public string NewState { get; set; }
+    }
     public interface IDoor
     {
         public void LockDoor();
@@ -15,5 +19,9 @@ namespace Handin2
         public void OnDoorOpen();
 
         public void OnDoorClose();
+
+        
+
+        event EventHandler<DoorOpenedEventArgs> DoorOpenedEvent;
     }
 }

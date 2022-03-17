@@ -1,8 +1,11 @@
-﻿    class Program
+﻿    using Handin2;
+
+    class Program
     {
         static void Main(string[] args)
         {
             // Assemble your system here from all the classes
+            IDoor door = new Door();
                     
             bool finish = false;
             do
