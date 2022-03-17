@@ -17,18 +17,19 @@ public class Door : IDoor
 
     public void OnDoorOpen()
     {
-        OnDoorOpened(new DoorOpenedEventArgs() {NewState = "open"});
+        OnDoorAction(new DoorEventArgs() {NewState = "open"});
     }
 
     public void OnDoorClose()
     {
-        //Lav event til station control
+        OnDoorAction(new DoorEventArgs() {NewState = "closed"});
     }
 
-    public event EventHandler<DoorOpenedEventArgs> DoorOpenedEvent;
+    public event EventHandler<DoorEventArgs> DoorEvent;
 
-    protected virtual void OnDoorOpened(DoorOpenedEventArgs e)
+    protected virtual void OnDoorAction(DoorEventArgs e)
     {
-        DoorOpenedEvent?.Invoke(this, e);
+        DoorEvent?.Invoke(this, e);
     }
+    
 }

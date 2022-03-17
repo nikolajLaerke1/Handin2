@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Handin2
 {
-    public class DoorOpenedEventArgs : EventArgs
+    public class DoorEventArgs : EventArgs
     {
         public string NewState { get; set; }
     }
@@ -22,6 +22,6 @@ namespace Handin2
 
         
 
-        event EventHandler<DoorOpenedEventArgs> DoorOpenedEvent;
+        event EventHandler<DoorEventArgs> DoorEvent;
     }
 }
