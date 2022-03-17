@@ -32,6 +32,7 @@ namespace Ladeskab
         {
             _charger = charger;
             _door = door;
+            _door.DoorEvent += HandleDoorEvent;
         }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
@@ -89,5 +90,9 @@ namespace Ladeskab
         }
 
         // Her mangler de andre trigger handlere
+        private void HandleDoorEvent(object Sender, DoorEventArgs e)
+        {
+            //Do something
+        }
     }
 }
