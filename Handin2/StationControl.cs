@@ -21,17 +21,21 @@ namespace Ladeskab
         // Her mangler flere member variable
         private LadeskabState _state;
         private IChargeControl _charger;
-        private int _oldId;
         private IDoor _door;
+        private IDisplay _display;
+        
+        private int _oldId;
 
         private string logFile = "logfile.txt"; // Navnet på systemets log-fil
 
         public StationControl(
             IChargeControl charger,
-            IDoor door)
+            IDoor door,
+            IDisplay display)
         {
             _charger = charger;
             _door = door;
+            _display = display;
         }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
@@ -51,13 +55,11 @@ namespace Ladeskab
                             writer.WriteLine(DateTime.Now + ": Skab låst med RFID: {0}", id);
                         }
 
-                        Console.WriteLine("Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op.");
+                        _display.ShowCharging();
                         _state = LadeskabState.Locked;
                     }
                     else
-                    {
-                        Console.WriteLine("Din telefon er ikke ordentlig tilsluttet. Prøv igen.");
-                    }
+                        _display.ShowConnectionError();
 
                     break;
 
@@ -75,13 +77,13 @@ namespace Ladeskab
                         {
                             writer.WriteLine(DateTime.Now + ": Skab låst op med RFID: {0}", id);
                         }
-
-                        Console.WriteLine("Tag din telefon ud af skabet og luk døren");
+                        
+                        _display.ShowRemovePhone();
                         _state = LadeskabState.Available;
                     }
                     else
                     {
-                        Console.WriteLine("Forkert RFID tag");
+                        _display.ShowRfidError();
                     }
 
                     break;
