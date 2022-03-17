@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Handin2;
-using Ladeskab.Interfaces;
 
 namespace Ladeskab
 {
@@ -27,7 +26,13 @@ namespace Ladeskab
 
         private string logFile = "logfile.txt"; // Navnet på systemets log-fil
 
-        // Her mangler constructor
+        public StationControl(
+            IChargeControl charger,
+            IDoor door)
+        {
+            _charger = charger;
+            _door = door;
+        }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
         private void RfidDetected(int id)
