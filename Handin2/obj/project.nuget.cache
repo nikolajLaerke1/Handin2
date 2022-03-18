@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "A5Dbeh+Ou+PsMX0Hv/oBNEOhWR2N47dfGVv+qeC7cXoeSMg9//bzwZORW9PgE+EjXKavIcIRMdIIqbN6HcsMVw==",
+  "dgSpecHash": "SA3Ga4bOd17A8t9CjN9zclKeqhtYx6vDIRYXCh+VE4Gadl5Cbj0NruL9gmPZB5tf4aOBPC5DFpw9+VPl3csN/Q==",
   "success": true,
-  "projectFilePath": "C:\\Skole\\4Semester\\SoftwareTest\\Assignment2\\Handin2\\Handin2.csproj",
+  "projectFilePath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\nikol\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
-    "C:\\Users\\nikol\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512"
+    "C:\\Users\\lukas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512"
   ],
   "logs": []
 }
