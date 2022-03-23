@@ -94,6 +94,14 @@ namespace Ladeskab
         private void HandleDoorEvent(object Sender, DoorEventArgs e)
         {
             //Do something
+            if (e.NewState == "open")
+            {
+                _display.ShowConnectPhone();
+            }
+            else if (e.NewState == "closed")
+            {
+                _display.ShowRfidInstruction();
+            }
         }
     }
 }
