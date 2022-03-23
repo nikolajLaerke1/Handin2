@@ -25,7 +25,7 @@ namespace Ladeskab
         private IDoor _door;
         private IDisplay _display;
 
-        
+
 
         public StationControl(
             IChargeControl charger,
@@ -45,44 +45,51 @@ namespace Ladeskab
             {
                 case LadeskabState.Available:
                     // Check for ladeforbindelse
-                    if (_charger.Connected)
-                    {
-                        _door.LockDoor();
-                        _charger.StartCharge();
-                        _oldId = id;
-                        LogFile.LogDoorLocked(id);
-                        
-
-                        _display.ShowCharging();
-                        _state = LadeskabState.Locked;
-                    }
-                    else
-                        _display.ShowConnectionError();
-
+                    SkabAvailable(id);
                     break;
 
                 case LadeskabState.DoorOpen:
                     // Ignore
                     break;
 
-                case LadeskabState.Locked:
-                    // Check for correct ID
-                    if (id == _oldId)
-                    {
-                        _charger.StopCharge();
-                        _door.UnlockDoor();
-                        LogFile.LogDoorUnlocked(id);
-                        
-                        _display.ShowRemovePhone();
-                        _state = LadeskabState.Available;
-                    }
-                    else
-                    {
-                        _display.ShowRfidError();
-                    }
-
+                case LadeskabState.Locked: 
+                    SkabLocked(id);
                     break;
             }
+        }
+
+        private void SkabLocked(int id)
+        {
+            if (id == _oldId)
+            {
+                _charger.StopCharge();
+                _door.UnlockDoor();
+                LogFile.LogDoorUnlocked(id);
+
+                _display.ShowRemovePhone();
+                _state = LadeskabState.Available;
+            }
+            else
+            {
+                _display.ShowRfidError();
+            }
+        }
+
+        private void SkabAvailable(int id)
+        {
+            if (_charger.Connected)
+            {
+                _door.LockDoor();
+                _charger.StartCharge();
+                _oldId = id;
+                LogFile.LogDoorLocked(id);
+
+
+                _display.ShowCharging();
+                _state = LadeskabState.Locked;
+            }
+            else
+                _display.ShowConnectionError();
         }
 
         // Her mangler de andre trigger handlere
