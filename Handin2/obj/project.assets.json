@@ -220,26 +220,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikol\\.nuget\\packages\\": {}
+    "C:\\Users\\lukas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Skole\\4Semester\\SoftwareTest\\Assignment2\\Handin2\\Handin2.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\OneDrive - Aarhus universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj",
       "projectName": "Handin2",
-      "projectPath": "C:\\Skole\\4Semester\\SoftwareTest\\Assignment2\\Handin2\\Handin2.csproj",
-      "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-      "outputPath": "C:\\Skole\\4Semester\\SoftwareTest\\Assignment2\\Handin2\\obj\\",
+      "projectPath": "C:\\Users\\lukas\\OneDrive - Aarhus universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj",
+      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lukas\\OneDrive - Aarhus universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -278,7 +276,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\lukas\\.dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

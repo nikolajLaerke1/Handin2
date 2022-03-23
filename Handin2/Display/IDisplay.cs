@@ -12,11 +12,10 @@ public interface IDisplay
     #region Errors
     public void ShowConnectionError();
     public void ShowRfidError();
+    public void ShowChargeError();
     #endregion
 
     #region Charging
     public void ShowCharging();
-    public void ShowFullyCharged();
-    public void ShowChargeError();
     #endregion
 }
