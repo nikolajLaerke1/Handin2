@@ -14,6 +14,23 @@ C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\SWT\Aflevering\Handin2\
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\SWT\Aflevering\Handin2\Handin2\obj\Debug\net6.0\ref\Handin2.dll
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\SWT\Aflevering\Handin2\Handin2\obj\Debug\net6.0\Handin2.pdb
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\SWT\Aflevering\Handin2\Handin2\obj\Debug\net6.0\Handin2.genruntimeconfig.cache
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\bin\Debug\net6.0\Handin2.exe
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\bin\Debug\net6.0\Handin2.deps.json
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\bin\Debug\net6.0\Handin2.runtimeconfig.json
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\bin\Debug\net6.0\Handin2.dll
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\bin\Debug\net6.0\Handin2.pdb
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\bin\Debug\net6.0\nunit.framework.dll
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.csproj.AssemblyReference.cache
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.AssemblyInfoInputs.cache
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.AssemblyInfo.cs
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.csproj.CoreCompileInputs.cache
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.csproj.CopyComplete
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.dll
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\refint\Handin2.dll
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.pdb
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\Handin2.genruntimeconfig.cache
+C:\Users\simbj\OneDrive - Aarhus Universitet\4_semester\SWT\HandIn2\Handin2\Handin2\obj\Debug\net6.0\ref\Handin2.dll
 C:\Skole\4Semester\SoftwareTest\Assignment2\Handin2\bin\Debug\net6.0\Handin2.exe
 C:\Skole\4Semester\SoftwareTest\Assignment2\Handin2\bin\Debug\net6.0\Handin2.deps.json
 C:\Skole\4Semester\SoftwareTest\Assignment2\Handin2\bin\Debug\net6.0\Handin2.runtimeconfig.json

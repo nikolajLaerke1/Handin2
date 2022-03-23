@@ -50,45 +50,52 @@ namespace Ladeskab
             {
                 case LadeskabState.Available:
                     // Check for ladeforbindelse
-                    if (_charger.Connected)
-                    {
-                        _door.LockDoor();
-                        _charger.StartCharge();
-                        _oldId = id;
-                        LogFile.LogDoorLocked(id);
-
-
-                        _display.UpdateInstructionsArea(
-                            "Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op");
-                        _state = LadeskabState.Locked;
-                    }
-                    else
-                        _display.UpdateInstructionsArea("Din telefon er ikke ordentlig tilsluttet. Prøv igen");
-
+                    SkabAvailable(id);
                     break;
 
                 case LadeskabState.DoorOpen:
                     // Ignore
                     break;
 
-                case LadeskabState.Locked:
-                    // Check for correct ID
-                    if (id == _oldId)
-                    {
-                        _charger.StopCharge();
-                        _door.UnlockDoor();
-                        LogFile.LogDoorUnlocked(id);
-                        
-                        _display.UpdateInstructionsArea("Tag din telefon ud af skabet og luk skabet");
-                        _state = LadeskabState.Available;
-                    }
-                    else
-                    {
-                        _display.UpdateInstructionsArea("Forkert RFID tag");
-                    }
-
+                case LadeskabState.Locked: 
+                    SkabLocked(id);
                     break;
             }
+        }
+        
+        private void SkabLocked(int id)
+        {
+            if (id == _oldId)
+            {
+                _charger.StopCharge();
+                _door.UnlockDoor();
+                LogFile.LogDoorUnlocked(id);
+
+                _display.UpdateInstructionsArea("Tag din telefon ud af skabet og luk skabet");
+                _state = LadeskabState.Available;
+            }
+            else
+            { 
+                _display.UpdateInstructionsArea("Forkert RFID tag");
+            }
+        }
+
+        private void SkabAvailable(int id)
+        {
+            if (_charger.Connected)
+            {
+                _door.LockDoor();
+                _charger.StartCharge();
+                _oldId = id;
+                LogFile.LogDoorLocked(id);
+
+
+                _display.UpdateInstructionsArea(
+                    "Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op");
+                _state = LadeskabState.Locked;
+            }
+            else
+                _display.UpdateInstructionsArea("Din telefon er ikke ordentlig tilsluttet. Prøv igen");
         }
 
         // Her mangler de andre trigger handlere
