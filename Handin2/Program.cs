@@ -10,12 +10,13 @@ class Program
         IChargeControl charger = new ChargeControl();
         IDisplay display = new Display();
         StationControl stationControl = new StationControl(charger, door, display);
-                
+        UsbChargerSimulator simulator = new();
+        
         bool finish = false;
         do
         {
             string input;
-            Console.WriteLine("Indtast E, O, C, R: ");
+            Console.WriteLine("Indtast E, O, C, R, 'T', 'D', 'S', 'P': ");
             input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
@@ -40,7 +41,23 @@ class Program
                     int id = Convert.ToInt32(idString);
                     //rfidReader.OnRfidRead(id);
                     break;
-
+                
+                case 'T':
+                    simulator.SimulateConnected(true);
+                    break;
+                
+                case 'D':
+                    simulator.SimulateConnected(false);
+                    break;
+                
+                case 'S':
+                    simulator.StartCharge();
+                    break;
+                
+                case 'P':
+                    simulator.StopCharge();
+                    break;
+                
                 default:
                     break;
             }
