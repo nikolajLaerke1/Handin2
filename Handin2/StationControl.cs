@@ -19,28 +19,33 @@ namespace Ladeskab
         };
 
         // Her mangler flere member variable
-        private LadeskabState _state;
+        private LadeskabState _state = LadeskabState.Available;
         private IChargeControl _charger;
         private int _oldId;
         private IDoor _door;
         private IDisplay _display;
+        private IRfidReader _reader;
 
         
 
         public StationControl(
             IChargeControl charger,
             IDoor door,
-            IDisplay display)
+            IDisplay display,
+            IRfidReader rfid)
         {
             _charger = charger;
             _door = door;
             _display = display;
             door.DoorEvent += HandleDoorEvent;
+            rfid.RfidEvent += RfidDetected;
+            _display.ShowRfidInstruction();
         }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
-        private void RfidDetected(int id)
+        private void RfidDetected(object sender, RfidEventArgs e)
         {
+            int id = e.Id;
             switch (_state)
             {
                 case LadeskabState.Available:
@@ -98,5 +103,6 @@ namespace Ladeskab
                 _display.ShowRfidInstruction();
             }
         }
+        
     }
 }

@@ -9,9 +9,10 @@ class Program
         IDoor door = new Door();
         IChargeControl charger = new ChargeControl();
         IDisplay display = new Display();
-        StationControl stationControl = new StationControl(charger, door, display);
+        IRfidReader rfidReader = new RfidReader();
+        StationControl stationControl = new StationControl(charger, door, display, rfidReader);
         UsbChargerSimulator simulator = new();
-        
+                
         bool finish = false;
         do
         {
