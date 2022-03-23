@@ -7,8 +7,6 @@ public interface IChargeControl
     public void StartCharge();
     public void StopCharge();
 
-    public class ConnectedEventArgs : EventArgs
-    {
-        public bool Connected { get; set; }
-    }
+    public void HandleCurrentValueEvent(object sender, CurrentEventArgs args);
+
 }

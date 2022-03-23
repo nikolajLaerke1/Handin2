@@ -6,18 +6,19 @@ class Program
     static void Main(string[] args)
     {
         // Assemble your system here from all the classes
+        UsbChargerSimulator simulator = new();
+
         IDoor door = new Door();
-        IChargeControl charger = new ChargeControl();
         IDisplay display = new Display();
         IRfidReader rfidReader = new RfidReader();
+        IChargeControl charger = new ChargeControl(simulator, display);
         StationControl stationControl = new StationControl(charger, door, display, rfidReader);
-        UsbChargerSimulator simulator = new();
                 
         bool finish = false;
         do
         {
             string input;
-            Console.WriteLine("Indtast E, O, C, R, 'T', 'D', 'S', 'P': ");
+            Console.WriteLine("[Simulator] Indtast E, O, C, R, 'T', 'D', 'S', 'P': ");
             input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
@@ -36,7 +37,7 @@ class Program
                     break;
 
                 case 'R':
-                    System.Console.WriteLine("Indtast RFID id: ");
+                    System.Console.WriteLine("[Simulator] Indtast RFID id: ");
                     string idString = System.Console.ReadLine();
 
                     int id = Convert.ToInt32(idString);

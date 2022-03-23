@@ -39,7 +39,7 @@ namespace Ladeskab
             _display = display;
             door.DoorEvent += HandleDoorEvent;
             rfid.RfidEvent += RfidDetected;
-            _display.ShowRfidInstruction();
+            _display.UpdateInstructionsArea("Indlæs RFID");
         }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
@@ -56,13 +56,14 @@ namespace Ladeskab
                         _charger.StartCharge();
                         _oldId = id;
                         LogFile.LogDoorLocked(id);
-                        
 
-                        _display.ShowCharging();
+
+                        _display.UpdateInstructionsArea(
+                            "Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op");
                         _state = LadeskabState.Locked;
                     }
                     else
-                        _display.ShowConnectionError();
+                        _display.UpdateInstructionsArea("Din telefon er ikke ordentlig tilsluttet. Prøv igen");
 
                     break;
 
@@ -78,12 +79,12 @@ namespace Ladeskab
                         _door.UnlockDoor();
                         LogFile.LogDoorUnlocked(id);
                         
-                        _display.ShowRemovePhone();
+                        _display.UpdateInstructionsArea("Tag din telefon ud af skabet og luk skabet");
                         _state = LadeskabState.Available;
                     }
                     else
                     {
-                        _display.ShowRfidError();
+                        _display.UpdateInstructionsArea("Forkert RFID tag");
                     }
 
                     break;
@@ -96,11 +97,11 @@ namespace Ladeskab
             //Do something
             if (e.NewState == "open")
             {
-                _display.ShowConnectPhone();
+                _display.UpdateInstructionsArea("Tilslut din telefon");
             }
             else if (e.NewState == "closed")
             {
-                _display.ShowRfidInstruction();
+                _display.UpdateInstructionsArea("Indlæs dit RFID");
             }
         }
         
