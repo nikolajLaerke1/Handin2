@@ -29,6 +29,7 @@ public class Door : IDoor
 
     protected virtual void OnDoorAction(DoorEventArgs e)
     {
+
         DoorEvent?.Invoke(this, e);
     }
     
