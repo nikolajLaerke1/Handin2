@@ -9,7 +9,8 @@ class Program
         IDoor door = new Door();
         IChargeControl charger = new ChargeControl();
         IDisplay display = new Display();
-        StationControl stationControl = new StationControl(charger, door, display);
+        IRfidReader rfidReader = new RfidReader();
+        StationControl stationControl = new StationControl(charger, door, display, rfidReader);
                 
         bool finish = false;
         do
@@ -38,7 +39,7 @@ class Program
                     string idString = System.Console.ReadLine();
 
                     int id = Convert.ToInt32(idString);
-                    //rfidReader.OnRfidRead(id);
+                    rfidReader.OnRfidRead(id);
                     break;
 
                 default:
