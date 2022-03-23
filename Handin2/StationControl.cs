@@ -25,7 +25,7 @@ namespace Ladeskab
         private IDoor _door;
         private IDisplay _display;
 
-        private string logFile = "logfile.txt"; // Navnet på systemets log-fil
+        
 
         public StationControl(
             IChargeControl charger,
@@ -35,7 +35,7 @@ namespace Ladeskab
             _charger = charger;
             _door = door;
             _display = display;
-            _door.DoorEvent += HandleDoorEvent;
+            door.DoorEvent += HandleDoorEvent;
         }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
@@ -50,10 +50,8 @@ namespace Ladeskab
                         _door.LockDoor();
                         _charger.StartCharge();
                         _oldId = id;
-                        using (var writer = File.AppendText(logFile))
-                        {
-                            writer.WriteLine(DateTime.Now + ": Skab låst med RFID: {0}", id);
-                        }
+                        LogFile.LogDoorLocked(id);
+                        
 
                         _display.ShowCharging();
                         _state = LadeskabState.Locked;
@@ -73,10 +71,7 @@ namespace Ladeskab
                     {
                         _charger.StopCharge();
                         _door.UnlockDoor();
-                        using (var writer = File.AppendText(logFile))
-                        {
-                            writer.WriteLine(DateTime.Now + ": Skab låst op med RFID: {0}", id);
-                        }
+                        LogFile.LogDoorUnlocked(id);
                         
                         _display.ShowRemovePhone();
                         _state = LadeskabState.Available;
@@ -94,6 +89,14 @@ namespace Ladeskab
         private void HandleDoorEvent(object Sender, DoorEventArgs e)
         {
             //Do something
+            if (e.NewState == "open")
+            {
+                _display.ShowConnectPhone();
+            }
+            else if (e.NewState == "closed")
+            {
+                _display.ShowRfidInstruction();
+            }
         }
     }
 }

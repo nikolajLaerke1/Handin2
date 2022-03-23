@@ -1,4 +1,5 @@
 ﻿using Handin2;
+using Ladeskab;
 
 class Program
 {
@@ -6,6 +7,9 @@ class Program
     {
         // Assemble your system here from all the classes
         IDoor door = new Door();
+        IChargeControl charger = new ChargeControl();
+        IDisplay display = new Display();
+        StationControl stationControl = new StationControl(charger, door, display);
                 
         bool finish = false;
         do
