@@ -9,16 +9,19 @@ class Program
         IDoor door = new Door();
         IChargeControl charger = new ChargeControl();
         IDisplay display = new Display();
-        StationControl stationControl = new StationControl(charger, door, display);
+        IRfidReader rfidReader = new RfidReader();
+        StationControl stationControl = new StationControl(charger, door, display, rfidReader);
+        UsbChargerSimulator simulator = new();
                 
         bool finish = false;
         do
         {
-            Console.WriteLine("Indtast E, O, C, R: ");
-            var input = Console.ReadLine();
+            string input;
+            Console.WriteLine("Indtast E, O, C, R, 'T', 'D', 'S', 'P': ");
+            input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
-            switch (char.ToUpper(input[0]))
+            switch (input[0])
             {
                 case 'E':
                     finish = true;
@@ -33,13 +36,29 @@ class Program
                     break;
 
                 case 'R':
-                    Console.WriteLine("Indtast RFID id: ");
-                    string? idString = Console.ReadLine();
+                    System.Console.WriteLine("Indtast RFID id: ");
+                    string idString = System.Console.ReadLine();
 
                     int id = Convert.ToInt32(idString);
                     //rfidReader.OnRfidRead(id);
                     break;
-
+                
+                case 'T':
+                    simulator.SimulateConnected(true);
+                    break;
+                
+                case 'D':
+                    simulator.SimulateConnected(false);
+                    break;
+                
+                case 'S':
+                    simulator.StartCharge();
+                    break;
+                
+                case 'P':
+                    simulator.StopCharge();
+                    break;
+                
                 default:
                     break;
             }

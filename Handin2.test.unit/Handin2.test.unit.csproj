@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Handin2.Classes\Handin2.Classes.csproj" />
     <ProjectReference Include="..\Handin2\Handin2.csproj" />
   </ItemGroup>
 
