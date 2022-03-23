@@ -11,8 +11,8 @@ class Program
         do
         {
             string input;
-            System.Console.WriteLine("Indtast E, O, C, R: ");
-            input = Console.ReadLine();
+            Console.WriteLine("Indtast E, O, C, R: ");
+            input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
             switch (input[0])

@@ -2,6 +2,9 @@
 
 public interface IDisplay
 {
+    public string ChargeArea { get; set; }
+    public string InstructionsArea { get; set; }
+    
     #region Instructions
     public void ShowConnectPhone();
     public void ShowRfidInstruction();
@@ -18,4 +21,7 @@ public interface IDisplay
     #region Charging
     public void ShowCharging();
     #endregion
+
+    public void UpdateDisplay(string InstructionsArea, string chargeArea);
+    public void UpdateDisplay(string instructionsArea);
 }
