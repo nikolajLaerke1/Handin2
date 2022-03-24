@@ -22,6 +22,7 @@ namespace Ladeskab
         private IChargeControl _charger;
         private int _oldId;
         private IDoor _door;
+        private IRfidReader _reader;
         private IDisplay _display;
         private LogFile _logFile;
         
@@ -29,18 +30,20 @@ namespace Ladeskab
             IChargeControl charger,
             IDoor door,
             IDisplay display,
-            IRfidReader rfid)
+            IRfidReader reader, 
+            LogFile logFile)
         {
             _charger = charger;
             _door = door;
             _display = display;
-            door.DoorEvent += HandleDoorEvent;
-            rfid.RfidEvent += RfidDetected;
+            _reader = reader;
+            _door.DoorEvent += HandleDoorEvent;
+            _reader.RfidEvent += ReaderDetected;
             _display.UpdateInstructionsArea("Indlæs RFID");
-            _logFile = new LogFile();
+            _logFile = logFile;
         }
 
-        private void RfidDetected(object sender, RfidEventArgs e)
+        private void ReaderDetected(object sender, RfidEventArgs e)
         {
             int id = e.Id;
             switch (_state)

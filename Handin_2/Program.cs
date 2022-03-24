@@ -7,13 +7,14 @@ class Program
     static void Main(string[] args)
     {
         // Assemble your system here from all the classes
+        LogFile logFile = new("logfile.txt");
         UsbChargerSimulator simulator = new();
 
         IDoor door = new Door();
         IDisplay display = new Display();
         IRfidReader rfidReader = new RfidReader();
         IChargeControl charger = new ChargeControl(simulator, display);
-        StationControl stationControl = new StationControl(charger, door, display, rfidReader);
+        StationControl stationControl = new StationControl(charger, door, display, rfidReader, logFile);
                 
         bool finish = false;
         do
@@ -40,8 +41,8 @@ class Program
                     break;
 
                 case 'R':
-                    System.Console.WriteLine("[Simulator] Indtast RFID id: ");
-                    string idString = System.Console.ReadLine();
+                    Console.WriteLine("[Simulator] Indtast RFID id: ");
+                    string idString = Console.ReadLine();
 
                     int id = Convert.ToInt32(idString);
                     rfidReader.OnRfidRead(id);

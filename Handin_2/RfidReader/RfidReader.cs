@@ -9,7 +9,7 @@ namespace Handin2
 
         public void OnRfidRead(int id)
         {
-            RfidEvent?.Invoke(this, new RfidEventArgs(id));
+            RfidEvent?.Invoke(this, new RfidEventArgs{Id = id});
         }
     }
 }

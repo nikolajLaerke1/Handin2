@@ -12,8 +12,8 @@ namespace Handin2
 
     public class RfidEventArgs : EventArgs
     {
-        public int Id { get; }
+        public int Id { get; set; }
 
-        public RfidEventArgs(int id) => Id = id;
+        // public RfidEventArgs(int id) => Id = id;
     }
 }

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Handin_2.test.unit/1.0.0": {
         "dependencies": {
+          "Castle.Core": "4.4.1",
           "Handin_2": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "NSubstitute": "4.3.0",
