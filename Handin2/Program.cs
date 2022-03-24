@@ -22,7 +22,7 @@ class Program
             input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
-            switch (input[0])
+            switch (char.ToUpper(input[0]))
             {
                 case 'E':
                     finish = true;
@@ -33,7 +33,10 @@ class Program
                     break;
 
                 case 'C':
-                    door.OnDoorClose();
+                    if (stationControl.IsDoorOpen())
+                        door.OnDoorClose();
+                    else
+                        Console.WriteLine("Door is already closed");
                     break;
 
                 case 'R':
@@ -41,15 +44,21 @@ class Program
                     string idString = System.Console.ReadLine();
 
                     int id = Convert.ToInt32(idString);
-                    //rfidReader.OnRfidRead(id);
+                    rfidReader.OnRfidRead(id);
                     break;
                 
                 case 'T':
-                    simulator.SimulateConnected(true);
+                    if (stationControl.IsDoorOpen())
+                        simulator.SimulateConnected(true);
+                    else
+                        Console.WriteLine("Door is not open. Please open the door before charging");
                     break;
                 
                 case 'D':
-                    simulator.SimulateConnected(false);
+                    if (stationControl.IsDoorOpen())
+                        simulator.SimulateConnected(false);
+                    else
+                        Console.WriteLine("Door is not open. Please open the door before attempting to disconnect");
                     break;
                 
                 case 'S':
