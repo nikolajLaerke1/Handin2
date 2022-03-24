@@ -98,6 +98,7 @@ namespace Ladeskab
             //Do something
             if (e.NewState == "open")
             {
+                _state = LadeskabState.DoorOpen;
                 _display.UpdateInstructionsArea("Tilslut din telefon");
             }
             else if (e.NewState == "closed")
@@ -105,6 +106,10 @@ namespace Ladeskab
                 _display.UpdateInstructionsArea("Indlæs dit RFID");
             }
         }
-        
+
+        public bool IsDoorOpen()
+        {
+            return _state == LadeskabState.DoorOpen;
+        }
     }
 }
