@@ -106,6 +106,10 @@ namespace Ladeskab
                 _display.UpdateInstructionsArea("Indlæs dit RFID");
             }
         }
-        
+
+        public bool IsDoorOpen()
+        {
+            return _state == LadeskabState.DoorOpen;
+        }
     }
 }

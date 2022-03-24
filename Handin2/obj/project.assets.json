@@ -220,23 +220,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lukas\\.nuget\\packages\\": {},
+    "C:\\Users\\simbj\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj",
+      "projectUniqueName": "C:\\Users\\simbj\\OneDrive - Aarhus Universitet\\4_semester\\SWT\\HandIn2\\Handin2\\Handin2\\Handin2.csproj",
       "projectName": "Handin2",
-      "projectPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj",
-      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\obj\\",
+      "projectPath": "C:\\Users\\simbj\\OneDrive - Aarhus Universitet\\4_semester\\SWT\\HandIn2\\Handin2\\Handin2\\Handin2.csproj",
+      "packagesPath": "C:\\Users\\simbj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simbj\\OneDrive - Aarhus Universitet\\4_semester\\SWT\\HandIn2\\Handin2\\Handin2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simbj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -283,7 +283,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
