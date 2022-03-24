@@ -23,6 +23,7 @@ namespace Ladeskab
         private int _oldId;
         private IDoor _door;
         private IDisplay _display;
+        private LogFile _logFile;
         
         public StationControl(
             IChargeControl charger,
@@ -36,6 +37,7 @@ namespace Ladeskab
             door.DoorEvent += HandleDoorEvent;
             rfid.RfidEvent += RfidDetected;
             _display.UpdateInstructionsArea("Indlæs RFID");
+            _logFile = new LogFile();
         }
 
         private void RfidDetected(object sender, RfidEventArgs e)
@@ -63,7 +65,7 @@ namespace Ladeskab
             {
                 _charger.StopCharge();
                 _door.UnlockDoor();
-                LogFile.LogDoorUnlocked(id);
+                _logFile.LogDoorUnlocked(id);
 
                 _display.UpdateInstructionsArea("Tag din telefon ud af skabet og luk skabet");
                 _state = LadeskabState.Available;
@@ -81,7 +83,7 @@ namespace Ladeskab
                 _door.LockDoor();
                 _charger.StartCharge();
                 _oldId = id;
-                LogFile.LogDoorLocked(id);
+                _logFile.LogDoorLocked(id);
 
 
                 _display.UpdateInstructionsArea(

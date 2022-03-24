@@ -18,9 +18,8 @@ class Program
         bool finish = false;
         do
         {
-            string input;
             Console.WriteLine("[Simulator] Indtast E, O, C, R, 'T', 'D', 'S', 'P': ");
-            input = Console.ReadLine().ToUpper();
+            var input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
             switch (char.ToUpper(input[0]))
