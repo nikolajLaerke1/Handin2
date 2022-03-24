@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net6.0": {
       "Castle.Core/4.4.1": {
         "type": "package",
         "dependencies": {
@@ -407,10 +407,10 @@
           "Castle.Core": "4.4.1"
         },
         "compile": {
-          "lib/net5.0/NSubstitute.dll": {}
+          "lib/net6.0/NSubstitute.dll": {}
         },
         "runtime": {
-          "lib/net5.0/NSubstitute.dll": {}
+          "lib/net6.0/NSubstitute.dll": {}
         }
       },
       "NuGet.Frameworks/5.11.0": {
@@ -1090,7 +1090,7 @@
       },
       "Handin_2/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
+        "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
           "bin/placeholder/Handin_2.dll": {}
         },
@@ -4533,7 +4533,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net6.0": [
       "Handin_2 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "NSubstitute >= 4.3.0",
@@ -4544,34 +4544,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikol\\.nuget\\packages\\": {}
+    "C:\\Users\\simbj\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
+      "projectUniqueName": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
       "projectName": "Handin_2.test.unit",
-      "projectPath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
-      "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-      "outputPath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\obj\\",
+      "projectPath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
+      "packagesPath": "C:\\Users\\simbj\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2.test.unit\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simbj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2\\Handin_2.csproj": {
-              "projectPath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2\\Handin_2.csproj"
+            "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2\\Handin_2.csproj": {
+              "projectPath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2\\Handin_2.csproj"
             }
           }
         }
@@ -4583,8 +4588,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -4623,26 +4628,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

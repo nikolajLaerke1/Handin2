@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JcS+YD9pPQ062BuvHONcdZ0voQYe9KC6Y/iT7jy72Jl2azVxZI3fmr/RueIHpNqXiX6wfTjLunOZb4hpEBKJog==",
+  "dgSpecHash": "DJ1pVmTo8keCd/jWWoEavmCOHXVVHxi219EMSabgtbWVybGTW//wg6VWrGRhHtXOQRfyiKr01sjI1szAU2EQwg==",
   "success": true,
-  "projectFilePath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2\\Handin_2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
-    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2\\Handin_2.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
