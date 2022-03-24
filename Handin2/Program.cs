@@ -41,14 +41,16 @@ class Program
                     string idString = System.Console.ReadLine();
 
                     int id = Convert.ToInt32(idString);
-                    //rfidReader.OnRfidRead(id);
+                    rfidReader.OnRfidRead(id);
                     break;
                 
                 case 'T':
+                    charger.Connected = true;
                     simulator.SimulateConnected(true);
                     break;
                 
                 case 'D':
+                    charger.Connected = false;
                     simulator.SimulateConnected(false);
                     break;
                 

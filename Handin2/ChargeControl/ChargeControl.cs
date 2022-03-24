@@ -38,14 +38,19 @@ public class ChargeControl : IChargeControl
             return;
         }
         
+        _usbCharger.StopCharge();
         Console.WriteLine("[ChargeControl]: Charging stopped");
 
     }
 
     public void HandleCurrentValueEvent(object sender, CurrentEventArgs args)
     {
+        Console.WriteLine($"[Debug] Current Charge: {args.Current}");
         if (args.Current == 0)
+        {
+            _display.UpdateChargeArea("");
             return;
+        }
 
         if (args.Current is > 0 and < FullyChargedCurrent)
         {
