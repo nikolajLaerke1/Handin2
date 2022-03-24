@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R0WqolrNTxuzEaGQieyTkAR5c2JdhSV1yglfX8j2jCyCk8tf5AsWPZTz+qgmw+317hyqR7k3+3aY6QBFsnkL9A==",
+  "dgSpecHash": "FQZ0hMC2570E7fbPd3RNfMayoVv9+o1tv6zHBSKQn4t2vkN7y5Y3nYTXzKAZqcceNih4l9ut9cwafTWVRAR6gQ==",
   "success": true,
   "projectFilePath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
   "expectedPackageFiles": [
@@ -61,7 +61,10 @@
     "C:\\Users\\nikol\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\nikol\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\nikol\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\nikol\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\nikol\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,21 +1,27 @@
-﻿namespace Handin2;
+﻿using System;
+using System.IO;
 
-public static class LogFile
+namespace Handin2
 {
-    private static string logFile = "logfile.txt"; // Navnet på systemets log-fil
-    public static void LogDoorLocked(int id)
-    {
-        using (var writer = File.AppendText(logFile))
-        {
-            writer.WriteLine(DateTime.Now + ": Skab låst med RFID: {0}", id);
-        }
-    }
 
-    public static void LogDoorUnlocked(int id)
+    public static class LogFile
     {
-        using (var writer = File.AppendText(logFile))
+        private static string logFile = "logfile.txt"; // Navnet på systemets log-fil
+
+        public static void LogDoorLocked(int id)
         {
-            writer.WriteLine(DateTime.Now + ": Skab låst op med RFID: {0}", id);
+            using (var writer = File.AppendText(logFile))
+            {
+                writer.WriteLine(DateTime.Now + ": Skab låst med RFID: {0}", id);
+            }
+        }
+
+        public static void LogDoorUnlocked(int id)
+        {
+            using (var writer = File.AppendText(logFile))
+            {
+                writer.WriteLine(DateTime.Now + ": Skab låst op med RFID: {0}", id);
+            }
         }
     }
 }

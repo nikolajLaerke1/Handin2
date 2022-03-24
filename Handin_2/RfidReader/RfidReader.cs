@@ -1,10 +1,15 @@
-﻿namespace Handin2;
+﻿using System;
 
-public class RfidReader : IRfidReader
+namespace Handin2
 {
-    public event EventHandler<RfidEventArgs>? RfidEvent;
-    public void OnRfidRead(int id)
+
+    public class RfidReader : IRfidReader
     {
-        RfidEvent?.Invoke(this, new RfidEventArgs(id));
+        public event EventHandler<RfidEventArgs>? RfidEvent;
+
+        public void OnRfidRead(int id)
+        {
+            RfidEvent?.Invoke(this, new RfidEventArgs(id));
+        }
     }
 }

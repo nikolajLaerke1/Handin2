@@ -1,72 +1,76 @@
-﻿namespace Handin2;
+﻿using System;
 
-public class ChargeControl : IChargeControl
+namespace Handin2
 {
-    private const double MaxCurrent = 500.0; // mA
-    private const double FullyChargedCurrent = 5.0; // mA
-    
-    public bool Connected { get; set; }
-    private bool Charging { get; set; }
-    private IUsbCharger _usbCharger;
-    private IDisplay _display;
-    
-    public ChargeControl(IUsbCharger usbCharger, IDisplay display)
+
+    public class ChargeControl : IChargeControl
     {
-        _usbCharger = usbCharger;
-        _display = display;
-        _usbCharger.CurrentValueEvent += HandleCurrentValueEvent;
-    }
-    
-    public void StartCharge()
-    {
-        if (!Connected)
+        private const double MaxCurrent = 500.0; // mA
+        private const double FullyChargedCurrent = 5.0; // mA
+
+        public bool Connected { get; set; }
+        private bool Charging { get; set; }
+        private IUsbCharger _usbCharger;
+        private IDisplay _display;
+
+        public ChargeControl(IUsbCharger usbCharger, IDisplay display)
         {
-            return;
+            _usbCharger = usbCharger;
+            _display = display;
+            _usbCharger.CurrentValueEvent += HandleCurrentValueEvent;
         }
 
-        Charging = true;
-        _usbCharger.StartCharge();
-    }
-
-    public void StopCharge()
-    {
-        Charging = false;
-     
-        if (!Connected)
+        public void StartCharge()
         {
-            Console.WriteLine("[ChargeControl]: Phone is disconnected, charging stopped");
-            return;
-        }
-        
-        _usbCharger.StopCharge();
-        Console.WriteLine("[ChargeControl]: Charging stopped");
+            if (!Connected)
+            {
+                return;
+            }
 
-    }
-
-    public void HandleCurrentValueEvent(object sender, CurrentEventArgs args)
-    {
-        Console.WriteLine($"[Debug] Current Charge: {args.Current}");
-        if (args.Current == 0)
-        {
-            _display.UpdateChargeArea("");
-            return;
+            Charging = true;
+            _usbCharger.StartCharge();
         }
 
-        if (args.Current is > 0 and < FullyChargedCurrent)
+        public void StopCharge()
         {
-            _display.UpdateChargeArea("Fuldt opladt");
-            return;
+            Charging = false;
+
+            if (!Connected)
+            {
+                Console.WriteLine("[ChargeControl]: Phone is disconnected, charging stopped");
+                return;
+            }
+
+            _usbCharger.StopCharge();
+            Console.WriteLine("[ChargeControl]: Charging stopped");
+
         }
 
-        if (args.Current is > FullyChargedCurrent and <= MaxCurrent)
+        public void HandleCurrentValueEvent(object sender, CurrentEventArgs args)
         {
-            _display.UpdateChargeArea("Telefon oplades...");
-            return;
-        }
+            Console.WriteLine($"[Debug] Current Charge: {args.Current}");
+            if (args.Current == 0)
+            {
+                _display.UpdateChargeArea("");
+                return;
+            }
 
-        if (args.Current > MaxCurrent)
-        {
-            _display.UpdateChargeArea("Opladerfejl");
+            if (args.Current is > 0 and < FullyChargedCurrent)
+            {
+                _display.UpdateChargeArea("Fuldt opladt");
+                return;
+            }
+
+            if (args.Current is > FullyChargedCurrent and <= MaxCurrent)
+            {
+                _display.UpdateChargeArea("Telefon oplades...");
+                return;
+            }
+
+            if (args.Current > MaxCurrent)
+            {
+                _display.UpdateChargeArea("Opladerfejl");
+            }
         }
     }
 }

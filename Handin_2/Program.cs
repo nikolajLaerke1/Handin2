@@ -1,4 +1,5 @@
-﻿using Handin2;
+﻿using System;
+using Handin2;
 using Ladeskab;
 
 class Program

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "67s08kvH0gZlfbGNXPMKtfvBGC3r2o1/ntzGu0lbu/eiILKrvak/Te8oaWhgEXi+mV1nNz4R/kK/QwOvphBKBA==",
+  "dgSpecHash": "JcS+YD9pPQ062BuvHONcdZ0voQYe9KC6Y/iT7jy72Jl2azVxZI3fmr/RueIHpNqXiX6wfTjLunOZb4hpEBKJog==",
   "success": true,
   "projectFilePath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2\\Handin_2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

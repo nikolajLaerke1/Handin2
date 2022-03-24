@@ -1,9 +1,11 @@
-﻿namespace Handin2;
-
-public interface IDisplay
+﻿namespace Handin2
 {
-    public void UpdateChargeArea(string message);
-    public void UpdateInstructionsArea(string message);
-    public void UpdateDisplay();
 
+    public interface IDisplay
+    {
+        public void UpdateChargeArea(string message);
+        public void UpdateInstructionsArea(string message);
+        public void UpdateDisplay();
+
+    }
 }

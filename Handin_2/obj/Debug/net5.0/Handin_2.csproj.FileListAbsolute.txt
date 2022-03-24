@@ -1,0 +1,17 @@
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.AssemblyInfoInputs.cache
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.AssemblyInfo.cs
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.csproj.CoreCompileInputs.cache
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.Properties.Resources.resources
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.csproj.GenerateResource.cache
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\Handin_2.exe
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\Handin_2.deps.json
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\Handin_2.runtimeconfig.json
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\Handin_2.runtimeconfig.dev.json
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\Handin_2.dll
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\ref\Handin_2.dll
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\bin\Debug\net5.0\Handin_2.pdb
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.dll
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\ref\Handin_2.dll
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.pdb
+C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net5.0\Handin_2.genruntimeconfig.cache
