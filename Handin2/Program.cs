@@ -22,7 +22,7 @@ class Program
             input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 
-            switch (char.ToUpper(input[0]))
+            switch (input[0])
             {
                 case 'E':
                     finish = true;
@@ -33,10 +33,7 @@ class Program
                     break;
 
                 case 'C':
-                    if (stationControl.IsDoorOpen())
-                        door.OnDoorClose();
-                    else
-                        Console.WriteLine("Door is already closed");
+                    door.OnDoorClose();
                     break;
 
                 case 'R':
@@ -48,17 +45,13 @@ class Program
                     break;
                 
                 case 'T':
-                    if (stationControl.IsDoorOpen())
-                        simulator.SimulateConnected(true);
-                    else
-                        Console.WriteLine("Door is not open. Please open the door before charging");
+                    charger.Connected = true;
+                    simulator.SimulateConnected(true);
                     break;
                 
                 case 'D':
-                    if (stationControl.IsDoorOpen())
-                        simulator.SimulateConnected(false);
-                    else
-                        Console.WriteLine("Door is not open. Please open the door before attempting to disconnect");
+                    charger.Connected = false;
+                    simulator.SimulateConnected(false);
                     break;
                 
                 case 'S':

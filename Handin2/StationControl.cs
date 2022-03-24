@@ -98,6 +98,7 @@ namespace Ladeskab
             //Do something
             if (e.NewState == "open")
             {
+                _state = LadeskabState.DoorOpen;
                 _display.UpdateInstructionsArea("Tilslut din telefon");
             }
             else if (e.NewState == "closed")
