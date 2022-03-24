@@ -23,12 +23,6 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
-      "coverlet.collector/3.1.2": {
-        "type": "package",
-        "build": {
-          "build/netstandard1.0/coverlet.collector.targets": {}
-        }
-      },
       "Microsoft.CodeCoverage/17.1.0": {
         "type": "package",
         "compile": {
@@ -441,12 +435,6 @@
         "type": "package",
         "build": {
           "build/netcoreapp2.1/NUnit3TestAdapter.props": {}
-        }
-      },
-      "NunitXml.TestLogger/3.0.117": {
-        "type": "package",
-        "build": {
-          "build/netstandard1.0/NUnitXml.TestLogger.props": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1088,14 +1076,17 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "Handin_2/1.0.0": {
+      "Handin2/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "NUnit": "3.13.3"
+        },
         "compile": {
-          "bin/placeholder/Handin_2.dll": {}
+          "bin/placeholder/Handin2.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Handin_2.dll": {}
+          "bin/placeholder/Handin2.dll": {}
         }
       }
     }
@@ -1124,57 +1115,6 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
-      ]
-    },
-    "coverlet.collector/3.1.2": {
-      "sha512": "wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
-      "type": "package",
-      "path": "coverlet.collector/3.1.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/netstandard1.0/Microsoft.CSharp.dll",
-        "build/netstandard1.0/Microsoft.DotNet.PlatformAbstractions.dll",
-        "build/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "build/netstandard1.0/Microsoft.Extensions.DependencyInjection.dll",
-        "build/netstandard1.0/Microsoft.Extensions.DependencyModel.dll",
-        "build/netstandard1.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "build/netstandard1.0/Microsoft.TestPlatform.CoreUtilities.dll",
-        "build/netstandard1.0/Microsoft.TestPlatform.PlatformAbstractions.dll",
-        "build/netstandard1.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
-        "build/netstandard1.0/Mono.Cecil.Mdb.dll",
-        "build/netstandard1.0/Mono.Cecil.Pdb.dll",
-        "build/netstandard1.0/Mono.Cecil.Rocks.dll",
-        "build/netstandard1.0/Mono.Cecil.dll",
-        "build/netstandard1.0/Newtonsoft.Json.dll",
-        "build/netstandard1.0/NuGet.Frameworks.dll",
-        "build/netstandard1.0/System.AppContext.dll",
-        "build/netstandard1.0/System.Collections.Immutable.dll",
-        "build/netstandard1.0/System.Dynamic.Runtime.dll",
-        "build/netstandard1.0/System.IO.FileSystem.Primitives.dll",
-        "build/netstandard1.0/System.Linq.Expressions.dll",
-        "build/netstandard1.0/System.Linq.dll",
-        "build/netstandard1.0/System.ObjectModel.dll",
-        "build/netstandard1.0/System.Reflection.Emit.ILGeneration.dll",
-        "build/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
-        "build/netstandard1.0/System.Reflection.Emit.dll",
-        "build/netstandard1.0/System.Reflection.Metadata.dll",
-        "build/netstandard1.0/System.Reflection.TypeExtensions.dll",
-        "build/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
-        "build/netstandard1.0/System.Text.RegularExpressions.dll",
-        "build/netstandard1.0/System.Threading.Tasks.Extensions.dll",
-        "build/netstandard1.0/System.Threading.dll",
-        "build/netstandard1.0/System.Xml.ReaderWriter.dll",
-        "build/netstandard1.0/System.Xml.XDocument.dll",
-        "build/netstandard1.0/coverlet.collector.deps.json",
-        "build/netstandard1.0/coverlet.collector.dll",
-        "build/netstandard1.0/coverlet.collector.pdb",
-        "build/netstandard1.0/coverlet.collector.targets",
-        "build/netstandard1.0/coverlet.core.dll",
-        "build/netstandard1.0/coverlet.core.pdb",
-        "coverlet-icon.png",
-        "coverlet.collector.3.1.2.nupkg.sha512",
-        "coverlet.collector.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/17.1.0": {
@@ -2083,23 +2023,6 @@
         "nunit3testadapter.nuspec"
       ]
     },
-    "NunitXml.TestLogger/3.0.117": {
-      "sha512": "+AEoIB71gu6R2QXzAs68MLlceLgo0T9hcL8yWGUi+UzozsDMIjHGKhqDqgCFwtO8UcXAJBaFNkK9o0gtFaLTSw==",
-      "type": "package",
-      "path": "nunitxml.testlogger/3.0.117",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/_common/Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestAdapter.dll",
-        "build/_common/Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestLogger.dll",
-        "build/_common/Spekt.TestLogger.dll",
-        "build/net45/NUnitXml.TestLogger.props",
-        "build/netstandard1.0/NUnitXml.TestLogger.props",
-        "nunitxml.testlogger.3.0.117.nupkg.sha512",
-        "nunitxml.testlogger.nuspec",
-        "packageIcon.png"
-      ]
-    },
     "runtime.native.System/4.3.0": {
       "sha512": "c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
       "type": "package",
@@ -2485,6 +2408,7 @@
       "path": "system.diagnostics.tools/4.0.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4424,6 +4348,7 @@
       "path": "system.xml.xdocument/4.0.11",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4526,41 +4451,44 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "Handin_2/1.0.0": {
+    "Handin2/1.0.0": {
       "type": "project",
-      "path": "../Handin_2/Handin_2.csproj",
-      "msbuildProject": "../Handin_2/Handin_2.csproj"
+      "path": "../Handin2/Handin2.csproj",
+      "msbuildProject": "../Handin2/Handin2.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Handin_2 >= 1.0.0",
+      "Handin2 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "NSubstitute >= 4.3.0",
       "NUnit >= 3.13.3",
-      "NUnit3TestAdapter >= 4.2.1",
-      "NunitXml.TestLogger >= 3.0.117",
-      "coverlet.collector >= 3.1.2"
+      "NUnit3TestAdapter >= 4.2.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikol\\.nuget\\packages\\": {}
+    "C:\\Users\\lukas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
-      "projectName": "Handin_2.test.unit",
-      "projectPath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
-      "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-      "outputPath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2.test.unit\\obj\\",
+      "projectUniqueName": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2.test.unit\\Handin2.test.unit.csproj",
+      "projectName": "Handin2.test.unit",
+      "projectPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2.test.unit\\Handin2.test.unit.csproj",
+      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2.test.unit\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "netcoreapp6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -4568,10 +4496,10 @@
       },
       "frameworks": {
         "net6.0": {
-          "targetAlias": "net6.0",
+          "targetAlias": "netcoreapp6.0",
           "projectReferences": {
-            "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2\\Handin_2.csproj": {
-              "projectPath": "C:\\Skole\\4Semester\\SoftwareTest\\Handin_2\\Handin_2\\Handin_2.csproj"
+            "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj": {
+              "projectPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\SWT\\Aflevering\\Handin2\\Handin2\\Handin2.csproj"
             }
           }
         }
@@ -4584,7 +4512,7 @@
     },
     "frameworks": {
       "net6.0": {
-        "targetAlias": "net6.0",
+        "targetAlias": "netcoreapp6.0",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -4601,16 +4529,6 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.2.1, )"
-          },
-          "NunitXml.TestLogger": {
-            "target": "Package",
-            "version": "[3.0.117, )"
-          },
-          "coverlet.collector": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[3.1.2, )"
           }
         },
         "imports": [

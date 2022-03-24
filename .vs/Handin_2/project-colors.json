@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ecab97f0-d2c0-4f04-8bd2-ec5d20ad1657": {
+      "ProjectGuid": "ecab97f0-d2c0-4f04-8bd2-ec5d20ad1657",
+      "DisplayName": "Handin_2",
+      "ColorIndex": 0
+    },
+    "791d5086-eadc-4465-8916-1f2145425dbf": {
+      "ProjectGuid": "791d5086-eadc-4465-8916-1f2145425dbf",
+      "DisplayName": "Handin_2.test.unit",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

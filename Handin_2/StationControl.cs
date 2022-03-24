@@ -23,7 +23,6 @@ namespace Ladeskab
         private int _oldId;
         private IDoor _door;
         private IDisplay _display;
-        private IRfidReader _reader;
         
         public StationControl(
             IChargeControl charger,
