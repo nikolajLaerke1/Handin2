@@ -53,7 +53,7 @@ namespace Handin2.test.unit
         [Test]
         public void OnDoorOpen_DoorClosed_CorrectNewStateReceived()
         {
-            _uut.OnDoorOpen();
+            _uut.OnDoorClose();
             Assert.That(_receivedEventArgs.NewState, Is.EqualTo("closed"));
         }
 
