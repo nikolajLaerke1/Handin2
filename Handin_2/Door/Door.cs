@@ -34,7 +34,6 @@ namespace Handin2
 
         protected virtual void OnDoorAction(DoorEventArgs e)
         {
-
             DoorEvent?.Invoke(this, e);
         }
 
