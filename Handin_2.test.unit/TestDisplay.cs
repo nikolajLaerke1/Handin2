@@ -1,47 +1,45 @@
 ﻿using NSubstitute;
 using NUnit.Framework;
 
-namespace Handin2.test.unit
+namespace Handin2.test.unit;
+
+[TestFixture]
+public class DisplayTest
 {
+    private Display _uut;
 
-    [TestFixture]
-    public class DisplayTest
+    [SetUp]
+    public void Setup() => _uut = Substitute.For<Display>();
+
+    [Test]
+    public void UpdateChargeArea_Message_ChargeAreaIsUpdated()
     {
-        private Display _uut;
+        const string chargeAreaMessage = "chargeAreaMessage";
 
-        [SetUp]
-        public void Setup() => _uut = Substitute.For<Display>();
+        // Act
+        _uut.UpdateChargeArea(chargeAreaMessage);
 
-        [Test]
-        public void UpdateChargeArea_Message_ChargeAreaIsUpdated()
-        {
-            const string chargeAreaMessage = "chargeAreaMessage";
+        // Assert
+        _uut.Received(1).UpdateDisplay();
 
-            // Act
-            _uut.UpdateChargeArea(chargeAreaMessage);
+        // Make sure only charge area changed its display area
+        Assert.That(_uut.ChargeArea, Is.EqualTo(chargeAreaMessage));
+        Assert.That(_uut.InstructionsArea, Is.EqualTo(""));
+    }
 
-            // Assert
-            _uut.Received(1).UpdateDisplay();
+    [Test]
+    public void UpdateInstructionsArea_Message_InstructionsAreaIsUpdated()
+    {
+        const string instructionsAreaMessage = "instructionsAreaMessage";
 
-            // Make sure only charge area changed its display area
-            Assert.That(_uut.ChargeArea, Is.EqualTo(chargeAreaMessage));
-            Assert.That(_uut.InstructionsArea, Is.EqualTo(""));
-        }
+        // Act
+        _uut.UpdateInstructionsArea(instructionsAreaMessage);
 
-        [Test]
-        public void UpdateInstructionsArea_Message_InstructionsAreaIsUpdated()
-        {
-            const string instructionsAreaMessage = "instructionsAreaMessage";
+        // Assert
+        _uut.Received(1).UpdateDisplay();
 
-            // Act
-            _uut.UpdateInstructionsArea(instructionsAreaMessage);
-
-            // Assert
-            _uut.Received(1).UpdateDisplay();
-
-            // Make sure only the instructions area changed its display area
-            Assert.That(_uut.InstructionsArea, Is.EqualTo(instructionsAreaMessage));
-            Assert.That(_uut.ChargeArea, Is.EqualTo(""));
-        }
+        // Make sure only the instructions area changed its display area
+        Assert.That(_uut.InstructionsArea, Is.EqualTo(instructionsAreaMessage));
+        Assert.That(_uut.ChargeArea, Is.EqualTo(""));
     }
 }
