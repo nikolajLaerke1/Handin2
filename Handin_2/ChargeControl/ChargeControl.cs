@@ -37,39 +37,37 @@ namespace Handin2
 
             if (!Connected)
             {
-                Console.WriteLine("[ChargeControl]: Phone is disconnected, charging stopped");
                 return;
             }
 
             _usbCharger.StopCharge();
-            Console.WriteLine("[ChargeControl]: Charging stopped");
-
+            _display.UpdateChargeArea("Opladning er stoppet");
         }
 
         public void HandleCurrentValueEvent(object sender, CurrentEventArgs args)
         {
-            Console.WriteLine($"[Debug] Current Charge: {args.Current}");
-            if (args.Current == 0)
+            if (args.Current <= 0)
             {
                 _display.UpdateChargeArea("");
+                Connected = false;
                 return;
             }
-
-            if (args.Current is > 0 and < FullyChargedCurrent)
+            
+            // The phone is confirmed to be connected
+            Connected = true;
+            
+            if (args.Current is > 0 and <= FullyChargedCurrent)
             {
                 _display.UpdateChargeArea("Fuldt opladt");
-                return;
             }
-
-            if (args.Current is > FullyChargedCurrent and <= MaxCurrent)
+            else if (args.Current is > FullyChargedCurrent and <= MaxCurrent)
             {
                 _display.UpdateChargeArea("Telefon oplades...");
-                return;
             }
-
-            if (args.Current > MaxCurrent)
+            else if (args.Current > MaxCurrent)
             {
                 _display.UpdateChargeArea("Opladerfejl");
+                StopCharge();
             }
         }
     }
