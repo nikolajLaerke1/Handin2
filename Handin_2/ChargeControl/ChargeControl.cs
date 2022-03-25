@@ -60,14 +60,15 @@ namespace Handin2
             {
                 _display.UpdateChargeArea("Telefon oplades...");
             }
-            else if (args.Current > MaxCurrent)
+            
+            // The phone is confirmed to be connected
+            Connected = true;
+            
+            if (args.Current > MaxCurrent)
             {
                 _display.UpdateChargeArea("Opladerfejl");
                 StopCharge();
             }
-            
-            // The phone is confirmed to be connected
-            Connected = true;
         }
     }
 }
