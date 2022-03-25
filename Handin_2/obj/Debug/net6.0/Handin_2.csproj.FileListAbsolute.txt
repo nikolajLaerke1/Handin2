@@ -34,8 +34,6 @@ C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\ref\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.pdb
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.csproj.AssemblyReference.cache
-C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.Properties.Resources.resources
-C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.csproj.GenerateResource.cache
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.GeneratedMSBuildEditorConfig.editorconfig
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.AssemblyInfoInputs.cache
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.AssemblyInfo.cs

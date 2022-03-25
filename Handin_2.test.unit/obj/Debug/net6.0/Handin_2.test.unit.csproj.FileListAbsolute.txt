@@ -230,9 +230,6 @@ C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\nunit.engine.dll
 C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\nunit.engine.api.dll
 C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\nunit.engine.core.dll
 C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\testcentric.engine.metadata.dll
-C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\Handin_2.deps.json
-C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\Handin_2.runtimeconfig.json
-C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\Handin_2.exe
 C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\Handin_2.test.unit.deps.json
 C:\SWT\Handin2\Handin2\Handin_2.test.unit\bin\Debug\net6.0\Handin_2.test.unit.runtimeconfig.json
