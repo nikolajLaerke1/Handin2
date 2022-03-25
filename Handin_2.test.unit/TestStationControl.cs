@@ -107,5 +107,27 @@ public class TestStationControl
         
         Assert.False(_uut.IsDoorOpen());
     }
+
+    [Test]
+    public void ReaderDetected_StateIsDoorOpen_NothingCalled()
+    {
+        fakeDoor.DoorEvent += Raise.EventWith(new DoorEventArgs{NewState = "open"});
+        fakeReader.RfidEvent += Raise.EventWith(new RfidEventArgs{Id = 0});
+
+        // Assert that SkabLocked was not called
+        fakeChargeControl.DidNotReceive().StopCharge();
+        fakeDoor.DidNotReceive().UnlockDoor();
+        fakeLogger.DidNotReceive().LogDoorUnlocked(0);
+        fakeDisplay.DidNotReceive().UpdateInstructionsArea(
+            "Forkert RFID tag");
+        
+        // Assert that SkabAvailable was not called
+        fakeDoor.DidNotReceive().LockDoor();
+        fakeChargeControl.DidNotReceive().StartCharge();
+        fakeLogger.DidNotReceive().LogDoorLocked(0);
+        fakeDisplay.DidNotReceive().UpdateInstructionsArea(
+            "Din telefon er ikke ordentlig tilsluttet. Prøv igen");
+        
+    }
 }
     
