@@ -4,6 +4,7 @@
   &lt;Or&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;NUnit3x::791D5086-EADC-4465-8916-1F2145425DBF::net6.0::Handin_2.test.unit.TestChargeControl&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::791D5086-EADC-4465-8916-1F2145425DBF::net6.0::Handin_2.test.unit.TestStationControl.ReaderDetected_StateIsDoorOpen_NothingCalled&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;ProjectFile&gt;791D5086-EADC-4465-8916-1F2145425DBF/f:TestDoor.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
