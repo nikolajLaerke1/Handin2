@@ -52,11 +52,7 @@ namespace Handin2
                 Connected = false;
                 return;
             }
-            
-            // The phone is confirmed to be connected
-            Connected = true;
-            
-            if (args.Current is > 0 and <= FullyChargedCurrent)
+            else if (args.Current is > 0 and <= FullyChargedCurrent)
             {
                 _display.UpdateChargeArea("Fuldt opladt");
             }
@@ -69,6 +65,9 @@ namespace Handin2
                 _display.UpdateChargeArea("Opladerfejl");
                 StopCharge();
             }
+            
+            // The phone is confirmed to be connected
+            Connected = true;
         }
     }
 }
