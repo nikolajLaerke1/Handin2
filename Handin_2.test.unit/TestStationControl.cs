@@ -60,17 +60,52 @@ public class TestStationControl
     }
     
     [Test]
-    public void RfidDetected_StateLockedAndChargerConnected_SkabLockedCalled()
+    [TestCase(0)]
+    public void RfidDetected_StateLockedAndChargerConnected_SkabLockedCalled(int id)
     {
-        const int id = 12;
-        
         fakeChargeControl.Connected = true;
+        fakeReader.RfidEvent += Raise.EventWith(new RfidEventArgs{Id = id});
+        
         fakeReader.RfidEvent += Raise.EventWith(new RfidEventArgs{Id = id});
 
         fakeChargeControl.Received(1).StopCharge();
-        fakeDoor.Received(1).LockDoor();
-        fakeLogger.Received(1).LogDoorLocked(id);
+        fakeDoor.Received(1).UnlockDoor();
+        fakeLogger.Received(1).LogDoorUnlocked(id);
         fakeDisplay.Received(1).UpdateInstructionsArea(
-            "Skabet er låst og din telefon lades. Brug dit RFID tag til at låse op");
+            "Tag din telefon ud af skabet og luk skabet");
+    }
+    
+    [TestCase(0)]
+    public void RfidDetected_StateLockedAndWrongRfid_SkabLockedCalled(int id)
+    {
+        fakeChargeControl.Connected = true;
+        fakeReader.RfidEvent += Raise.EventWith(new RfidEventArgs{Id = id});
+        
+        // scanning a tag with a different id
+        fakeReader.RfidEvent += Raise.EventWith(new RfidEventArgs{Id = ++id});
+
+        fakeChargeControl.Received(0).StopCharge();
+        fakeDoor.Received(0).UnlockDoor();
+        fakeLogger.Received(0).LogDoorUnlocked(id);
+        fakeDisplay.Received(1).UpdateInstructionsArea(
+            "Forkert RFID tag");
+    }
+
+    [TestCase("open", "Tilslut din telefon")]
+    [TestCase("closed", "Indlæs dit RFID")]
+    public void DoorEvent_DoorStateChange_LadeSkabStateIsChanged(string state, string displayMessage)
+    {
+        fakeDoor.DoorEvent += Raise.EventWith(new DoorEventArgs{NewState = state});
+        fakeDisplay.Received(1).UpdateInstructionsArea(displayMessage);
+    }
+
+    [Test]
+    public void IsDoorOpenCalled_DoorIsClosed_FalseReturned()
+    {
+        fakeChargeControl.Connected = true;
+        fakeReader.RfidEvent += Raise.EventWith(new RfidEventArgs{Id = 0});
+        
+        Assert.False(_uut.IsDoorOpen());
     }
 }
+    
