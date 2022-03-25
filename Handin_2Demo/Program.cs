@@ -19,7 +19,9 @@ class Program
         bool finish = false;
         do
         {
-            Console.WriteLine("[Simulator] Indtast E, O, C, R, T, D, S, P: ");
+            Console.WriteLine("[Simulator] Vælg en mulighed: (E)xit, (O)pen Door, (C)lose Door, " +
+                              "(R)ead Tag, (T)ilslut, (D)isconnect, " +
+                              "(S)tart Charge, (P)ause Charge: ");
             var input = Console.ReadLine().ToUpper();
             if (string.IsNullOrEmpty(input)) continue;
 

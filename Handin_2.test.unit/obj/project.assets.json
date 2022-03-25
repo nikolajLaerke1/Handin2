@@ -4545,23 +4545,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lukas\\.nuget\\packages\\": {},
+    "C:\\Users\\simbj\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SWT\\Handin2\\Handin2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
+      "projectUniqueName": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
       "projectName": "Handin_2.test.unit",
-      "projectPath": "C:\\SWT\\Handin2\\Handin2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
-      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\SWT\\Handin2\\Handin2\\Handin_2.test.unit\\obj\\",
+      "projectPath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2.test.unit\\Handin_2.test.unit.csproj",
+      "packagesPath": "C:\\Users\\simbj\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2.test.unit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simbj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4576,8 +4576,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\SWT\\Handin2\\Handin2\\Handin_2\\Handin_2.csproj": {
-              "projectPath": "C:\\SWT\\Handin2\\Handin2\\Handin_2\\Handin_2.csproj"
+            "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2\\Handin_2.csproj": {
+              "projectPath": "D:\\Programming\\SWT_handin2\\Handin2\\Handin_2\\Handin_2.csproj"
             }
           }
         }
@@ -4638,7 +4638,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

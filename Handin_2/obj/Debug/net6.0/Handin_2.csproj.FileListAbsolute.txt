@@ -12,14 +12,10 @@ C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net6.0\Handin_2.dll
 C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net6.0\ref\Handin_2.dll
 C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net6.0\Handin_2.pdb
 C:\Skole\4Semester\SoftwareTest\Handin_2\Handin_2\obj\Debug\net6.0\Handin_2.genruntimeconfig.cache
-D:\Programming\SWT_handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.exe
 D:\Programming\SWT_handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.deps.json
-D:\Programming\SWT_handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.runtimeconfig.json
 D:\Programming\SWT_handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.dll
 D:\Programming\SWT_handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.pdb
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.csproj.AssemblyReference.cache
-D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.Properties.Resources.resources
-D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.csproj.GenerateResource.cache
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.GeneratedMSBuildEditorConfig.editorconfig
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.AssemblyInfoInputs.cache
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.AssemblyInfo.cs
@@ -27,7 +23,6 @@ D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.csproj.Cor
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.dll
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\refint\Handin_2.dll
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.pdb
-D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.genruntimeconfig.cache
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\ref\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.deps.json
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.dll
