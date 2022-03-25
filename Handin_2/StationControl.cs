@@ -45,6 +45,7 @@ namespace Ladeskab
 
         private void ReaderDetected(object sender, RfidEventArgs e)
         {
+            Console.WriteLine(e.Id);
             int id = e.Id;
             switch (_state)
             {
@@ -100,13 +101,14 @@ namespace Ladeskab
         private void HandleDoorEvent(object sender, DoorEventArgs e)
         {
             //Do something
-            if (e.NewState == "open")
+            if (e.NewState == "open" && !_charger.Connected)
             {
                 _state = LadeskabState.DoorOpen;
                 _display.UpdateInstructionsArea("Tilslut din telefon");
             }
             else if (e.NewState == "closed")
             {
+                _state = LadeskabState.Available;
                 _display.UpdateInstructionsArea("Indlæs dit RFID");
             }
         }

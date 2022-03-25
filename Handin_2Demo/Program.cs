@@ -50,14 +50,20 @@ class Program
                 
                 case 'T':
                     if (stationControl.IsDoorOpen())
+                    {
                         simulator.SimulateConnected(true);
+                        charger.Connected = true;
+                    }
                     else
                         Console.WriteLine("Door is not open. Please open the door before charging");
                     break;
                 
                 case 'D':
                     if (stationControl.IsDoorOpen())
+                    {
                         simulator.SimulateConnected(false);
+                        charger.Connected = false;
+                    }
                     else
                         Console.WriteLine("Door is not open. Please open the door before attempting to disconnect");
                     break;

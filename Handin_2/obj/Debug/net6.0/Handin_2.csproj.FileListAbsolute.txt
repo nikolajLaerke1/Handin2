@@ -29,9 +29,7 @@ D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\refint\Handin_2.dll
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.pdb
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.genruntimeconfig.cache
 D:\Programming\SWT_handin2\Handin2\Handin_2\obj\Debug\net6.0\ref\Handin_2.dll
-C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.exe
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.deps.json
-C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.runtimeconfig.json
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\ref\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\bin\Debug\net6.0\Handin_2.pdb
@@ -45,4 +43,3 @@ C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.csproj.CoreCompileInpu
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\ref\Handin_2.dll
 C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.pdb
-C:\SWT\Handin2\Handin2\Handin_2\obj\Debug\net6.0\Handin_2.genruntimeconfig.cache
