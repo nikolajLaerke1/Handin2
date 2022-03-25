@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handin_2", "Handin_2\Handin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handin_2.test.unit", "Handin_2.test.unit\Handin_2.test.unit.csproj", "{791D5086-EADC-4465-8916-1F2145425DBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handin_2Demo", "Handin_2Demo\Handin_2Demo.csproj", "{D5BCC08F-2DFB-4B96-9FF7-58285BFB7087}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{791D5086-EADC-4465-8916-1F2145425DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{791D5086-EADC-4465-8916-1F2145425DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{791D5086-EADC-4465-8916-1F2145425DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BCC08F-2DFB-4B96-9FF7-58285BFB7087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BCC08F-2DFB-4B96-9FF7-58285BFB7087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BCC08F-2DFB-4B96-9FF7-58285BFB7087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BCC08F-2DFB-4B96-9FF7-58285BFB7087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

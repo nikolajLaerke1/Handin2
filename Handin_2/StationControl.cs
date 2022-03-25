@@ -39,7 +39,7 @@ namespace Ladeskab
             _reader = reader;
             _door.DoorEvent += HandleDoorEvent;
             _reader.RfidEvent += ReaderDetected;
-            _display.UpdateInstructionsArea("Indlæs RFID");
+            _display.UpdateInstructionsArea("Ladeskabet er ledigt");
             _logFile = logFile;
         }
 
